@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+//tugas hilal 17 juni 2020
+
+float hambatanParalel(float R1, float R2, float R3 ){
+	int Rt = R1*R2*R3;
+	float X, Y, Z, done, hasil;
+	X= (Rt/R1)*1; Y=(Rt/R2)*1; Z=(Rt/R3)*1;
+	hasil = (X + Y + Z);
+	done = hasil / Rt;
+	cout<<"  \nparalel = ";
+	cout<< hasil<<"/"<<Rt;
+	return done;
+}
+int hambatanSeri (int R1, int R2, int R3){
+	return R1 + R2 + R3;
+}
+int main(){int in1,in2,in3;
+	cout<<"Masukan nilai R1 = ";
+	cin>>in1;
+	cout<<"Masukan nilai R2 = ";
+	cin>>in2;
+	cout <<"Masukan nilai R3 = ";
+	cin>>in3;
+	cout<<"------------------";
+	cout<<"\nSeri "<< hambatanSeri (in1, in2, in3);
+	cout<<"\nParalel "<< hambatanParalel (in1, in2, in3);
+	return 0;	
+}
